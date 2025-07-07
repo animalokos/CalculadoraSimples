@@ -25,11 +25,50 @@ public class Main {
     }
 
     public static void main(String[] args) {
+        //Scanner e bufferedReader tem funções similares, mas o scanner é mais fácil.
+        Scanner sc = new Scanner(System.in);
+        int opcao;
 
-        System.out.println("Hello and welcome!");
+        do{
+            System.out.println("\nCalculadora Simples:");
+            System.out.println("1 - Somar");
+            System.out.println("2 - Subtrair");
+            System.out.println("3 - Multiplicar");
+            System.out.println("4 - Dividir");
+            System.out.println("0 - Sair");
+            System.out.print("Escolha uma opção: ");
+            opcao = sc.nextInt();
 
-        for (int i = 1; i <= 5; i++) {
-            System.out.println("i = " + i);
-        }
+            if(opcao >= 1 && opcao <=4){
+                System.out.print("Digite o primeiro número: ");
+                double a = sc.nextDouble();
+                System.out.print("Digite o segundo número: ");
+                double b = sc.nextDouble();
+                double resultado = 0;
+
+                switch (opcao) {
+                    case 1:
+                        resultado = somar(a, b);
+                        break;
+                    case 2:
+                        resultado = subtrair(a, b);
+                        break;
+                    case 3:
+                        resultado = multiplicar(a, b);
+                        break;
+                    case 4:
+                        resultado = dividir(a, b);
+                        break;
+                }
+
+                System.out.println("Resultado: " + resultado);
+            } else if (opcao != 0) {
+                System.out.println("Opção inválida.");
+            }
+
+        }while(opcao != 0);
+
+        System.out.println("Encerrando calculadora...");
+        sc.close();
     }
 }
