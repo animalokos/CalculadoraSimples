@@ -1,0 +1,14 @@
+Projetos Java
+
+1. Calculadora simples
+Nível: Iniciante
+
+Projeto: Aplicação console para realizar operações básicas(soma, subtração, multiplicação, divisão).
+
+Requisitos:
+- Uso de estruturas condicionais.
+- Entrada e saída via console.
+- Tratamento básico de exceções.
+- Modularização simples.
+
+Foco: lógica básica, sintaxe Java, manipulação de entrada/saída
